@@ -14,4 +14,6 @@ class AIDEFENS_API AADGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+	AADGameModeBase();
 };

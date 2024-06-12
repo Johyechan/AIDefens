@@ -3,3 +3,10 @@
 
 #include "Player/ADPlayerController.h"
 
+void AADPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+
+	FInputModeGameOnly GameOnlyInputMode;
+	SetInputMode(GameOnlyInputMode);
+}
