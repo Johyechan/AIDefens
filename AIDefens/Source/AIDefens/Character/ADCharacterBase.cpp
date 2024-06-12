@@ -37,7 +37,7 @@ AADCharacterBase::AADCharacterBase()
 		GetMesh()->SetSkeletalMesh(CharacterMeshRef.Object);
 	}
 
-	static ConstructorHelpers::FClassFinder<UAnimInstance>AnimInstanceClassRef(TEXT("/Game/FirstPersonArms/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C"));
+	static ConstructorHelpers::FClassFinder<UAnimInstance>AnimInstanceClassRef(TEXT("/Game/AIDefens/Animation/ABP_ADCharacter.ABP_ADCharacter_C"));
 	if (AnimInstanceClassRef.Class)
 	{
 		GetMesh()->SetAnimInstanceClass(AnimInstanceClassRef.Class);

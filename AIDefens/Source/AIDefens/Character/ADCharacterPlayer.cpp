@@ -13,7 +13,8 @@ AADCharacterPlayer::AADCharacterPlayer()
 	// Camera
 	FirstPersonCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCamera->SetupAttachment(GetMesh(), TEXT("head"));
-	FirstPersonCamera->SetRelativeLocation(FVector(-10.0f, 0.0f, 0));
+	FirstPersonCamera->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+	FirstPersonCamera->SetRelativeRotation(FRotator(0.0f, 0.0f, 90.0f));
 	FirstPersonCamera->bUsePawnControlRotation = true;
 
 	// Input
