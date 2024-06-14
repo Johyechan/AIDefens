@@ -14,4 +14,9 @@ class AIDEFENS_API AADCharacterBase : public ACharacter
 public:
 	AADCharacterBase();
 
+// Item Section
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Equipment)
+	TObjectPtr<class USkeletalMeshComponent> Weapon;
+
 };

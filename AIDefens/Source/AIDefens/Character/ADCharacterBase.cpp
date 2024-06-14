@@ -42,5 +42,14 @@ AADCharacterBase::AADCharacterBase()
 	{
 		GetMesh()->SetAnimInstanceClass(AnimInstanceClassRef.Class);
 	}
+
+	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
+	Weapon->SetupAttachment(GetMesh(), TEXT("GripPoint"));
+
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh>WeaponMeshRef(TEXT("/Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun"));
+	if (WeaponMeshRef.Object)
+	{
+		Weapon->SetSkeletalMesh(WeaponMeshRef.Object);
+	}
 }
 
